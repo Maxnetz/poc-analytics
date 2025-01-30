@@ -17,12 +17,22 @@ export const useGA = () => {
 	}
 
 	const buttonClick = <T extends keyof Analytic>(action: T, value: Analytic[T]) => {
-		console.log('GA Event:', action, value) // Debug log to see if this is called
 		sendGAEvent('event', action, { value })
+	}
+
+	// Track time spent on each page
+	const trackTimeSpent = (startTime: number, pathname: string) => {
+		const timeSpent = Date.now() - startTime
+		sendGAEvent('event', 'time_spent', {
+			event_category: 'Page Timing',
+			event_label: pathname,
+			value: timeSpent / 1000, // Convert to seconds
+		})
 	}
 
 	return {
 		pageView,
 		buttonClick,
+		trackTimeSpent,
 	}
 }
