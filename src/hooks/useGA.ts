@@ -26,7 +26,7 @@ export const useGA = () => {
 		sendGAEvent('event', 'time_spent', {
 			event_category: 'Page Timing',
 			event_label: pathname,
-			value: timeSpent / 1000, // Convert to seconds
+			time_spent_in_seconds: Math.floor(timeSpent / 1000),
 		})
 	}
 
