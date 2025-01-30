@@ -1,6 +1,6 @@
 'use client'
 
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { ReactNode } from 'react'
 
 import { PageViewMonitor } from '@/components/PageViewMonitor'
@@ -18,7 +18,7 @@ export const Providers = ({ children }: Readonly<ProvidersProps>) => {
 
 			{children}
 
-			<GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID} />
+			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
 		</ReactQueryProvider>
 	)
 }

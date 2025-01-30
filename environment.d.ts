@@ -4,6 +4,6 @@ declare namespace NodeJS {
      * Google configuration
      */
 
-    NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID: string;
+    NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: string;
   }
 }
