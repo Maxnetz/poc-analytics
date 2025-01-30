@@ -24,8 +24,8 @@ export const useGA = () => {
 		});
 	  };
 
-	return {
+	  return {
 		pageView,
-		action: buttonClick,
-	}
+		buttonClick, 
+	  };
 }
