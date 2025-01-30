@@ -17,6 +17,7 @@ export const useGA = () => {
 	}
 
 	const buttonClick = <T extends keyof Analytic>(action: T, value: Analytic[T]) => {
+		console.log('GA Event:', action, value);  // Debug log to see if this is called
 		sendGAEvent({
 		  eventName: action,
 		  value,
