@@ -3,12 +3,12 @@
 import { useQuery } from '@tanstack/react-query'
 import { usePathname } from 'next/navigation'
 
-import { useGTM } from '@/hooks/useGTM'
+import { useGA } from '@/hooks/useGA'
 
 export const PageViewMonitor = () => {
 	const pathname = usePathname()
 
-	const { pageView } = useGTM()
+	const { pageView } = useGA()
 
 	useQuery({
 		queryKey: ['page-view', pathname],
