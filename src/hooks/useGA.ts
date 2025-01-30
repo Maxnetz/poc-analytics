@@ -6,6 +6,7 @@ export interface Analytic {
 	link_click: string
 	form_submit: boolean
 	banner_click: string
+	scroll_depth: number
 }
 
 export const useGA = () => {
@@ -30,9 +31,43 @@ export const useGA = () => {
 		})
 	}
 
+	const trackScrollDepth = () => {
+		const documentHeight = document.documentElement.scrollHeight - window.innerHeight
+		const scrollPosition = window.scrollY
+		const scrollPercentage = Math.round((scrollPosition / documentHeight) * 100)
+	
+		// Track scroll depth when user reaches certain thresholds
+		if (scrollPercentage >= 25 && scrollPercentage < 50) {
+		  sendGAEvent('event', 'scroll_depth', {
+			event_category: 'Scroll Tracking',
+			event_label: '25%',
+			value: scrollPercentage,
+		  })
+		} else if (scrollPercentage >= 50 && scrollPercentage < 75) {
+		  sendGAEvent('event', 'scroll_depth', {
+			event_category: 'Scroll Tracking',
+			event_label: '50%',
+			value: scrollPercentage,
+		  })
+		} else if (scrollPercentage >= 75 && scrollPercentage < 100) {
+		  sendGAEvent('event', 'scroll_depth', {
+			event_category: 'Scroll Tracking',
+			event_label: '75%',
+			value: scrollPercentage,
+		  })
+		} else if (scrollPercentage >= 100) {
+		  sendGAEvent('event', 'scroll_depth', {
+			event_category: 'Scroll Tracking',
+			event_label: '100%',
+			value: scrollPercentage,
+		  })
+		}
+	  }
+
 	return {
 		pageView,
 		buttonClick,
 		trackTimeSpent,
+		trackScrollDepth,
 	}
 }
