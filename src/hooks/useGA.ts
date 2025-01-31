@@ -35,34 +35,34 @@ export const useGA = () => {
 		const documentHeight = document.documentElement.scrollHeight - window.innerHeight
 		const scrollPosition = window.scrollY
 		const scrollPercentage = Math.round((scrollPosition / documentHeight) * 100)
-	
+
 		// Track scroll depth when user reaches certain thresholds
 		if (scrollPercentage >= 25 && scrollPercentage < 50) {
-		  sendGAEvent('event', 'scroll_depth', {
-			event_category: 'Scroll Tracking',
-			event_label: '25%',
-			value: scrollPercentage,
-		  })
+			sendGAEvent('event', 'scroll_depth', {
+				event_category: 'Scroll Tracking',
+				event_label: '25%',
+				value: scrollPercentage,
+			})
 		} else if (scrollPercentage >= 50 && scrollPercentage < 75) {
-		  sendGAEvent('event', 'scroll_depth', {
-			event_category: 'Scroll Tracking',
-			event_label: '50%',
-			value: scrollPercentage,
-		  })
+			sendGAEvent('event', 'scroll_depth', {
+				event_category: 'Scroll Tracking',
+				event_label: '50%',
+				value: scrollPercentage,
+			})
 		} else if (scrollPercentage >= 75 && scrollPercentage < 100) {
-		  sendGAEvent('event', 'scroll_depth', {
-			event_category: 'Scroll Tracking',
-			event_label: '75%',
-			value: scrollPercentage,
-		  })
+			sendGAEvent('event', 'scroll_depth', {
+				event_category: 'Scroll Tracking',
+				event_label: '75%',
+				value: scrollPercentage,
+			})
 		} else if (scrollPercentage >= 100) {
-		  sendGAEvent('event', 'scroll_depth', {
-			event_category: 'Scroll Tracking',
-			event_label: '100%',
-			value: scrollPercentage,
-		  })
+			sendGAEvent('event', 'scroll_depth', {
+				event_category: 'Scroll Tracking',
+				event_label: '100%',
+				value: scrollPercentage,
+			})
 		}
-	  }
+	}
 
 	return {
 		pageView,
@@ -70,4 +70,9 @@ export const useGA = () => {
 		trackTimeSpent,
 		trackScrollDepth,
 	}
+}
+
+export const pageContent = {
+	bannerText:
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula, nisi sit amet tempus euismod, lorem turpis feugiat enim, ac sodales odio nisi sit amet dolor.',
 }
